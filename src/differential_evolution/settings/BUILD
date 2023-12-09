@@ -1,0 +1,8 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "SettingsLib",
+    srcs = ["settings.cc"],
+    hdrs = ["settings.h"],
+    visibility = ["//visibility:public"],
+)
