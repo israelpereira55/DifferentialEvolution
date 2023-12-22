@@ -14,5 +14,6 @@ cc_library(
     deps = [
             "//src/differential_evolution/settings:SettingsLib",
             "//src/lib/randomlib:RandomLib",
+            "@glog",
            ],
 )

@@ -16,6 +16,7 @@ cc_binary(
             "@com_google_absl//absl/flags:parse",
             "@com_google_absl//absl/flags:usage",
             "@glog",
+            "@yaml-cpp",
             "//src/differential_evolution:DE",
             "//src/lib/randomlib:RandomLib",
             ],

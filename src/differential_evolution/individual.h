@@ -7,11 +7,16 @@
 
 using namespace std;
 
+/* To be consistent, right after creation the individual needs:
+ * - calculate cost
+ * - check Feasibility
+ * - mark defined as true
+ */
 class Individual {
-  // private:
-  public:
+   private:
+   public:
     // vector<double> genotype;  /* continuous space */
-    vector<int> phenotype;    /* discrete space */
+    vector<int> phenotype; /* discrete space */
 
     double cost = 0;
     bool feasible = false;
@@ -24,15 +29,10 @@ class Individual {
     Individual() = default;
     ~Individual() = default;
 
-    void CreateRandom(int lower_bound, int upper_bound, int N);
-    
-    /* To be consistent, right after creation the individual needs:
-     * - calculate cost
-     * - check Feasibility
-     * - mark defined as true
-     */
+    void CreateRandom(const vector<vector<int>>& graph, int lower_bound, int upper_bound, int N);
+
     void CheckFeasibility();
-    void CalculateCost();
+    void DefineCost(const vector<vector<int>>& graph);
 };
 
 #endif  // INDIVIDUAL_H_

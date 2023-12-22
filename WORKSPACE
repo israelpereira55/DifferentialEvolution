@@ -44,3 +44,9 @@ git_repository(
     remote = "https://github.com/gflags/gflags.git",
     tag = "v2.2.2",
 )
+
+git_repository(
+    name = "yaml-cpp",
+    remote = "https://github.com/jbeder/yaml-cpp.git",
+    tag = "0.8.0",
+)

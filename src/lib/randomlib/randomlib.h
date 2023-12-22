@@ -1,10 +1,11 @@
 #ifndef RANDOMLIB_H_
 #define RANDOMLIB_H_
 
-#include <random>
 #include <chrono>
+#include <random>
 
-// auto seed = std::chrono::high_resolution_clock::now().time_since_epoch().count(); 
+// auto seed =
+// std::chrono::high_resolution_clock::now().time_since_epoch().count();
 
 extern std::random_device dev;
 extern std::mt19937 rng;
@@ -13,7 +14,6 @@ extern std::mt19937 rng;
 // Range is inclusive [lower_bound, upper_bound]
 int random_integer(int lower_bound, int upper_bound);
 double random_real(double lower_bound, double upper_bound);
-
 
 extern std::uniform_int_distribution<int> default_distr;
 
